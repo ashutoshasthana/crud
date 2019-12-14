@@ -1,0 +1,17 @@
+{
+  "students": [
+    {
+      "id": 3,
+      "st_name": "Ashutosh",
+      "address": "Lucknow",
+      "gender": "male"
+    },
+    {
+      "st_name": "Anurag",
+      "address": "Banglore",
+      "gender": "male",
+      "id": 4
+    }
+  ],
+  "login": []
+}

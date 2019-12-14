@@ -1,0 +1,24 @@
+<h3>Add Student</h3>
+<form [formGroup]="_fg" (ngSubmit)="onSubmit()">
+    <div class="form-group" >
+      <label for="exampleInputEmail1">Student Name</label>
+      <input type="text" formControlName="st_name" class="form-control form-control-sm" id="st_name" aria-describedby="emailHelp">
+    </div>
+    <div class="form-group">
+      <label >Adrress</label>
+      <input type="text" formControlName="address" class="form-control form-control-sm" id="address">
+    </div>
+    <div class="form-group">
+        <label >Gender</label>&nbsp;
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" formControlName="gender" type="radio" name="gender" value="male">
+            <label class="form-check-label" for="inlineCheckbox1">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" formControlName="gender" type="radio"  name="gender" value="female">
+            <label class="form-check-label" for="inlineCheckbox2">female</label>
+          </div>
+    </div>    
+    <button type="submit"   class="btn btn-primary btn-sm">Submit</button>&nbsp;
+    <a class="btn btn-primary btn-sm"  routerLink='/show'>Show All</a>
+  </form>

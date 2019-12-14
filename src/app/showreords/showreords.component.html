@@ -1,0 +1,43 @@
+<h3>Display Records </h3>
+<table class="table table-white">
+    <thead>
+       <tr>
+           <th>#</th>
+           <th>Student Name</th>
+           <th>Address</th>
+           <th>Gender</th>
+           <th>Action</th>
+       </tr> 
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of _records;let index = index"> 
+            <td>{{student?.id}}</td>
+            <td>{{student?.st_name}}</td>
+            <td>{{student?.address}}</td>
+            <td>{{student?.gender}}</td>
+            <td>
+              <div style="display: flex;">
+                <button class="btn btn-primary btn-sm" (click)="see_dtails(student?.id)">Details</button>&nbsp;
+                <button class="btn btn-warning btn-sm" (click)="update_record(student)">Update</button>&nbsp;
+                <button class="btn btn-danger btn-sm" (click)="delete_record(student?.id)">Delete</button>
+              </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div *ngIf="record !== null">
+    <div class="card">
+        <div class="card-header">
+          Student Id <b>{{record?.id}}</b>
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+           <b>Name </b> : {{record?.st_name}}<br/>
+           <b>Address</b> : {{record?.address}}<br/>
+           <b>Gender</b> : {{record?.gender}}
+          </blockquote>
+        </div>
+      </div>
+</div><br/>
+<a class="btn btn-primary btn-sm"  routerLink='/register'>Add Student</a>
